@@ -27,7 +27,7 @@ public class FeedBackSevice {
 
 	public ResponseEntity<FeedBack> createFeedBack(FeedBack feedBack) {
 		try {
-			FeedBack newFeedBack = feedBackRepo.save(new FeedBack (feedBack.geteMail(),feedBack.getFeedBack()));
+			FeedBack newFeedBack = feedBackRepo.save(new FeedBack (feedBack.geteMail(),feedBack.getFeedBack(),feedBack.getPhoneNum()));
 			return new ResponseEntity<>(newFeedBack,HttpStatus.CREATED);
 			}catch(Exception e) {
 				return new ResponseEntity<>(null,HttpStatus.SERVICE_UNAVAILABLE);

@@ -5,9 +5,18 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
 public class Address {
+	String street;
 	String city;
 	String state;
 	long zipCode;
+	
+	
+	public String getStreet() {
+		return street;
+	}
+	public void setStreet(String street) {
+		this.street = street;
+	}
 	String country;
 	
 	
